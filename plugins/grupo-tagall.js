@@ -2,13 +2,14 @@
 - tagall By Angel-OFC  
 - Etiqueta en un grupo a todos
 - Embellecido por Carlos (Shizuka-AI)
+- Personalizado por Erenxszy (RukiaBot)
 */
 
 const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, command, usedPrefix }) => {
   if (usedPrefix?.toLowerCase() === 'a') return // evita conflicto con alias "a"
 
   const chatData = global.db.data.chats[m.chat] || {}
-  const customEmoji = chatData.customEmoji || '🍫'
+  const customEmoji = chatData.customEmoji || '❄️'
   const botName = global.botname || 'Shizuka-AI'
   const version = global.vs || 'v1.0.0'
 
