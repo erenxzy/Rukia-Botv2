@@ -1,5 +1,5 @@
 let handler = async (m, { conn, args }) => {
-  m.react("❄️");
+
 
 let handler = async (m, { conn, args }) => {
     let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
