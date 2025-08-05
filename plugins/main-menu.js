@@ -1,5 +1,5 @@
 let handler = async (m, { conn, args }) => {
-  m.react("❄️");
+  m.react("❄️");
 
 let handler = async (m, { conn, args }) => {
     let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
@@ -583,7 +583,7 @@ let handler = async (m, { conn, args }) => {
 
 
 `.trim()
-
+await m.react("❄️");
 await conn.sendMessage(m.chat, {
     video: { url: 'https://cdn.russellxz.click/a98b9080.mp4' },
     gifPlayback: true,
