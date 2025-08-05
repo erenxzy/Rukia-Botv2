@@ -10,8 +10,8 @@ const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, co
 
   const chatData = global.db.data.chats[m.chat] || {}
   const customEmoji = chatData.customEmoji || '❄️'
-  const botName = global.botname || 'Shizuka-AI'
-  const version = global.vs || 'v1.0.0'
+  const botName = global.botname || 'RukiaBot'
+  const version = global.vs || 'v2.0.0'
 
   await m.react(customEmoji)
 
@@ -23,12 +23,12 @@ const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, co
   const mensaje = args.join(' ') || 'Sin mensaje personalizado.'
   const info = `*» INFO:* ${mensaje}`
 
-  let texto = `╭──〔 🗣️ MENCION GENERAL 〕──╮\n`
+  let texto = `╭──〔 🥷🏻 MENCION GENERAL 〕──╮\n`
   texto += `┃ *Total:* ${participants.length} miembros\n┃\n┃ ${info}\n┃\n`
   for (const user of participants) {
     texto += `┃ ${customEmoji} @${user.id.split('@')[0]}\n`
   }
-  texto += `╰─⸼ 𓆩 ${botName} ・ ${version} 𓆪`
+  texto += `╰─⸼ ❄️ ${botName} ・ ${version} ❄️`
 
   await conn.sendMessage(
     m.chat,
